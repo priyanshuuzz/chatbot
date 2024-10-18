@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* 3D effect utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform {
+  transform-style: preserve-3d;
+}
+
+/* Glowing effect for messages */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(66, 153, 225, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(66, 153, 225, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(66, 153, 225, 0.5);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s infinite;
+}
